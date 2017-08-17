@@ -1,6 +1,10 @@
 adapter: redis
-url: YOUR_URL
+url: https://praychattest.herokuapp.com/
+
+if ENV["REDISCLOUD_URL"]
+  Soulmate.redis = ENV["REDISCLOUD_URL"]
+end
 
 production:
   adapter: redis
-  url: <%= ENV["REDISCLOUD_URL"] %>
+  url: https://praychattest.herokuapp.com/
